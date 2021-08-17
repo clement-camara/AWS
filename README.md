@@ -34,7 +34,7 @@ Amazon Elastic Container Registry est un registre de conteneurs entièrement gé
 qui facilite le stockage, la gestion, le partage et le déploiement de vos images
 
 
-![shema-aws](https://github.com/clement-camara/AWS/tree/master/image/AWS-SCHEMA.png))
+![shema-aws](/image/AWS-SCHEMA.png))
 
 
 # -------------------------------------------- #
