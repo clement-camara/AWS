@@ -34,7 +34,7 @@ Amazon Elastic Container Registry est un registre de conteneurs entièrement gé
 qui facilite le stockage, la gestion, le partage et le déploiement de vos images
 
 
-![shema-aws](/image/AWS-SCHEMA.png))
+![shema-aws](/image/AWS-SCHEMA.png)
 
 
 # -------------------------------------------- #
@@ -63,7 +63,7 @@ https://console.aws.amazon.com/console/home?region=us-east-1
 
 https://console.aws.amazon.com/iam/home#/security_credentials
 
-![securité](/Users/marinelafargue/Desktop/AWS/image/security.png))
+![securité](/image/security.png)
 
 --> procédure pour le déploiement via ECS
 
@@ -145,11 +145,11 @@ https://us-east-1.console.aws.amazon.com/ecs/home?region=us-east-1#/clusters
 
 Cela créra également une instance EC2 pour que vous puissiez exécuter votre image Docker.
 
-![cluster](/Users/marinelafargue/Desktop/AWS/image/cluster.png))
+![cluster](/image/cluster.png))
 
 ### 3) Parametrage du cluster
 
-![cluster2](/Users/marinelafargue/Desktop/AWS/image/cluster2.png))
+![cluster2](/image/cluster2.png))
 
 Choisir le cluster 
 Mettre un nom de cluster
@@ -159,13 +159,13 @@ ensuite tout laissé par défault
 
 ### 4) Afficher le cluster et attendre 1 ou 2 minutes en affichant l'instance
 
-![cluster3](/Users/marinelafargue/Desktop/AWS/image/cluster3.png))
+![cluster3](/image/cluster3.png))
 
 ### 5) Créé un référentiel privé sur Elastic Container Register, qui vous permet de déployer votre conteneur Docker sur AWS
 
 https://us-east-1.console.aws.amazon.com/ecr/repositories?region=us-east-1
 
-![repo](/Users/marinelafargue/Desktop/AWS/image/repo.png))
+![repo](/image/repo.png))
 
 ### 6)  Cliquez sur Afficher les commandes push et suivez les instructions pour déployer votre application
 
@@ -180,9 +180,9 @@ commande 4 : Exécutez la commande 4 pour transférer cette image dans le dernie
 
 Copier votre URI et passez a la suite
 
-![repo2](/Users/marinelafargue/Desktop/AWS/image/repo2.png))
+![repo2](/image/repo2.png))
 
-![repo3](/Users/marinelafargue/Desktop/AWS/image/repo3.png))
+![repo3](/image/repo3.png))
 
 
 ### 7) sur la même page du référentiel allez dans task definition
@@ -202,7 +202,7 @@ Copier votre URI et passez a la suite
 
 ### une fois créé allez sur créer un service
 
-![service](/Users/marinelafargue/Desktop/AWS/image/service.png))
+![service](/image/service.png))
 
 1) choisir EC2
 2) un nom comme par exemple server-simplonien
