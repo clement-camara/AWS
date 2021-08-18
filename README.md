@@ -93,47 +93,12 @@ https://console.aws.amazon.com/iam/home#/users$new?step=details
 3) mettre les droits administrateurs
 4) créé l'user et enregistres les secret key
 
-#### 3) Créez un référentiel Amazon ECR pour stocker votre image
 
---> récupérer la valeur dans le dictionnaire qui apparait :
-
-"repositoryUri": "426584999926.dkr.ecr.us-east-1.amazonaws.com/repo_demo_mickael"
-
-#### 4) Balisez l'image avec la valeur repositoryUri de l'étape précédente
-
-##### 5) Exécutez la commande aws ecr get-login-password.
-
---> Spécifiez l'URI du registre sur lequel vous souhaitez vous authentifier
-
-````shell
-aws ecr get-login-password | docker login --username AWS --password-stdin aws_account_id.dkr.ecr.region.amazonaws.com
-````
-
-#### EXEMPLE
-
-````shell
-aws ecr get-login-password | docker login --username AWS --password-stdin 426584999926.dkr.ecr.us-east-1.amazonaws.com/repo_demo_mickael
-````
-Si ca a marché il y aura marqué "Login Succeeded"
-
-#### 6) Créez votre image Docker à l'aide de la commande suivante
-
-````shell
-docker build -t 426584999926.dkr.ecr.us-east-1.amazonaws.com/repo_demo_mickael .
-````
-#### 7) pousser l'image sur le repo aws
-
-````shell
-docker push 426584999926.dkr.ecr.us-east-1.amazonaws.com/repo_demo_mickael:latest
-````
---> si ca marche l'image apparaitra dans le repo créé sur amazon
-
-## Créé ensuite votre cluster pour héberger votre container ( voir facon de faire numéro 2  )
 
 # ----------------------------------- #
 
 
-# Facon de faire numéro 2
+# Facon de faire numéro 1
 
 ## Service de cluster Amazon Elastic
 
@@ -282,6 +247,43 @@ docker info
 
 --> https://console.aws.amazon.com/ecr/repositories?region=us-east-1
 
+
+#### 3) Créez un référentiel Amazon ECR pour stocker votre image
+
+--> récupérer la valeur dans le dictionnaire qui apparait :
+
+"repositoryUri": "426584999926.dkr.ecr.us-east-1.amazonaws.com/repo_demo_mickael"
+
+#### 4) Balisez l'image avec la valeur repositoryUri de l'étape précédente
+
+##### 5) Exécutez la commande aws ecr get-login-password.
+
+--> Spécifiez l'URI du registre sur lequel vous souhaitez vous authentifier
+
+````shell
+aws ecr get-login-password | docker login --username AWS --password-stdin aws_account_id.dkr.ecr.region.amazonaws.com
+````
+
+#### EXEMPLE
+
+````shell
+aws ecr get-login-password | docker login --username AWS --password-stdin 426584999926.dkr.ecr.us-east-1.amazonaws.com/repo_demo_mickael
+````
+Si ca a marché il y aura marqué "Login Succeeded"
+
+#### 6) Créez votre image Docker à l'aide de la commande suivante
+
+````shell
+docker build -t 426584999926.dkr.ecr.us-east-1.amazonaws.com/repo_demo_mickael .
+````
+#### 7) pousser l'image sur le repo aws
+
+````shell
+docker push 426584999926.dkr.ecr.us-east-1.amazonaws.com/repo_demo_mickael:latest
+````
+--> si ca marche l'image apparaitra dans le repo créé sur amazon
+
+## Créé ensuite votre cluster pour héberger votre container ( voir facon de faire numéro 2  )
 
 
 
