@@ -68,6 +68,9 @@ https://console.aws.amazon.com/iam/home#/security_credentials
 --> procédure pour le déploiement via ECS
 
 ### Installer AWS Cli
+
+L'AWS Command Line Interface (AWS CLI) est un outil à code source libre qui vous permet d'interagir avec les services AWS à l'aide des commandes du terminal de ligne de commande.
+
 ``` shell
 $ brew install awscli 
 $ aws configure 
@@ -76,6 +79,8 @@ AWS Secret Access Key [Aucun] : <YOUR_SECRET_KEY_HERE>
 Nom de la région par défaut [Aucun] : us-west-2 
 Format de sortie par défaut [Aucun] : json
 ```
+
+
 ## ------------------------------------------------------- ##
 
 #### 1) installé et configuré l'AWS CLI
